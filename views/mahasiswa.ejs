@@ -1,0 +1,35 @@
+<!-- mahasiswa.ejs -->
+<div class="w-full h-fit flex justify-center">
+  <div class="bg-white w-fit p-5 rounded-[20px] h-auto m-4">
+    <h1 class="mb-2 text-2xl font-bold text-[#777777]">Data Mahasiswa</h1>
+    <div class="bg-[#e4e9f7] mb-4 p-2 rounded-[20px]">
+      <table class="striped-table" id="myTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">No</th>    
+            <th onclick="sortTable(1)">NIM</th>
+            <th onclick="sortTable(2)">Nama</th>
+            <th onclick="sortTable(3)">Alamat</th>
+            <th onclick="sortTable(4)">Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% mahasiswa.forEach(function(mhs, index) { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= mhs.nim %></td>
+              <td><%= mhs.nama %></td>
+              <td><%= mhs.alamat %></td>
+              <td><%= mhs.email %></td>
+              <td><button class="p-1 text-sm rounded-lg bg-emerald-500 text-white mr-2" onclick="window.location.href='/mahasiswa/update?id=<%= mhs.id %>'">Update</button><button class="p-1 text-sm rounded-lg bg-red-600 text-white" onclick="window.location.href='/mahasiswa/delete?id=<%= mhs.id %>'">Delete</button></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+      <div class="">
+        <button class="p-2 text-sm rounded-full bg-emerald-500 text-white" onclick="window.location.href='/mahasiswa/tambah'">Tambah Mahasiswa</button>
+      </div>
+  </div>
+</div>

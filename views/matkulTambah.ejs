@@ -1,0 +1,18 @@
+<!-- index.ejs -->
+<div class="w-full h-fit flex justify-center">
+  <div class="bg-white w-5/12 p-5 rounded-[20px] h-auto m-4 flex flex-row justify-center">
+    <form action="/matkul/tambah" class="w-11/12" method="POST">
+        <h1 class="mb-2 text-2xl font-bold">Input Data Mahasiswa</h1>
+        <label for="kode_matkul">Kode Matkul</label><br>
+        <input type="number" name="kode_matkul" id="kode_matkul" class="mb-2 border border-gray-300 focus:outline-none focus:border-[#2a2185] focus:ring-1 focus:ring-[#2a2185] px-3 py-2 rounded-md w-full" required>
+        <br>
+        <label for="nama">Nama Matkul</label><br>
+        <input type="text" name="nama_matkul" id="nama_matkul" class="mb-2 border border-gray-300 focus:outline-none focus:border-[#2a2185] focus:ring-1 focus:ring-[#2a2185] px-3 py-2 rounded-md w-full" required>
+        <br>
+        <label for="email">SKS</label><br>
+        <input type="number" name="sks" id="sks" class="mb-2 border border-gray-300 focus:outline-none focus:border-[#2a2185] focus:ring-1 focus:ring-[#2a2185] px-3 py-2 rounded-md w-full" required>
+        <br>
+        <button class="p-2 text-sm rounded-full bg-emerald-500 text-white" type="submit">Simpan</button>
+    </form>
+  </div>
+</div>

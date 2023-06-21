@@ -1,0 +1,23 @@
+<!-- index.ejs -->
+<div class="w-full h-fit flex justify-center">
+  <div class="bg-white w-5/12 p-5 rounded-[20px] h-auto m-4 flex flex-row justify-center">
+    <form action="/mahasiswa/update" class="w-11/12" method="POST">
+      <h1 class="mb-2 text-2xl font-bold">Update Data Mahasiswa</h1>
+      <input type="text" name="id" value="<%= mahasiswa.id %>" style="display: none;">
+      <label for="nim">NIM</label><br>
+      <input type="nim" name="nim" id="nim" value="<%= mahasiswa.nim %>" class="mb-2 border border-gray-300 focus:outline-none focus:border-[#2a2185] focus:ring-1 focus:ring-[#2a2185] px-3 py-2 rounded-md w-full" required>
+      <br>
+      <label for="nama">Nama</label>
+      <input type="text" name="nama" id="nama" value="<%= mahasiswa.nama %>" class="mb-2 border border-gray-300 focus:outline-none focus:border-[#2a2185] focus:ring-1 focus:ring-[#2a2185] px-3 py-2 rounded-md w-full" required>
+      <br>
+      <label for="alamat">Alamat</label>
+      <input type="alamat" name="alamat" id="alamat" value="<%= mahasiswa.alamat %>" class="mb-2 border border-gray-300 focus:outline-none focus:border-[#2a2185] focus:ring-1 focus:ring-[#2a2185] px-3 py-2 rounded-md w-full" required>
+      <br>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" value="<%= mahasiswa.email %>" class="mb-2 border border-gray-300 focus:outline-none focus:border-[#2a2185] focus:ring-1 focus:ring-[#2a2185] px-3 py-2 rounded-md w-full" required>
+      <br>
+      <button class="p-2 text-sm rounded-full bg-emerald-500 text-white" type="submit">Update</button>
+    </form>
+  </div>
+</div>
+
